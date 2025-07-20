@@ -1,0 +1,12 @@
+name: "chirpstack-hpr_docusaurus"
+services:
+  dev:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./docs:/opt/docusaurus
+    environment:
+      - NODE_ENV=development

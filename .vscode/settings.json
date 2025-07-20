@@ -1,0 +1,44 @@
+{
+  "editor.rulers": [100],
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "files.trimTrailingWhitespace": true,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#BF40BF",
+    "titleBar.activeForeground": "#ffffff"
+  },
+  "prettier.proseWrap": "always",
+  "[mdx]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "mdx",
+    "md"
+  ],
+  "spellright.parserByClass": {
+    "mdx": {
+      "parser": "markdown"
+    }
+  },
+  "spellright.ignoreRegExpsByClass": {
+    "mdx": [ 
+      "/&amp;/g",
+      "/&nbsp;/g",
+      "/&mdash;/g",
+      "/&gt;/g",
+      "/&lt;/g" 
+    ],
+    "md": [ 
+      "/&amp;/g",
+      "/&nbsp;/g",
+      "/&mdash;/g",
+      "/&gt;/g",
+      "/&lt;/g" 
+    ],
+  }
+}
