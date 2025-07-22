@@ -14,7 +14,7 @@ tags:
     - helium-config-service-cli
 ---
 
-:::danger
+:::danger Requirment
 
 **Helium Config Service Cli**
 `helium-config-service-cli` is required for some of these steps.
@@ -27,6 +27,7 @@ tags:
 
 ## Infrastructure Requirements
 
+:::warning Suggested Minimum Requirements
 The infrastructure requirements noted below are sufficient for getting a ChirpStack instance up and
 running for experimentation purposes, but are not suggested for use in a mission critical, production
 setting.
@@ -36,6 +37,8 @@ setting.
 - 100GB SSD hard drive
 - CPU with x86 architecture
 - Ubuntu 22.04 or 24.04
+
+:::
 
 ## Server Configuration
 
@@ -385,6 +388,21 @@ services:
 volumes:
   postgresqldata:
   redisdata:
+
+networks:
+  default:
+    name: helium-iot-net
+    external: true
+```
+
+## Create External Docker Network
+
+For this example we will create an external docker network called `helium-iot-net` which we will
+attach all the containers running chirpstack. If you're familiar with docker networking and already
+have an existing docker network you intend on using adjust accordingly.
+
+```sh title="Create external docker network"
+docker network create helium-iot-net
 ```
 
 ## Run ChirpStack
