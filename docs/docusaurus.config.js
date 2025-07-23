@@ -23,14 +23,14 @@ const config = {
   url: 'https://ccall48.githum.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/chirpstack-hpr.github.io/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ccall48', // Usually your GitHub org/user name.
   projectName: 'chirpstack-hpr.github.io', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', //'throw',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -52,7 +52,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             //'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-            'https://github.com/ccall48/chirpstack-hpr.github.io/tree/master/'
+            'https://github.com/ccall48/chirpstack-hpr.github.io/tree/master/docs'
         },
         // blog: {
         //   showReadingTime: true,
@@ -80,7 +80,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/chirpstack-hpr-logo.jpg',
       navbar: {
         title: 'Chirpstack-HPR',
         logo: {
@@ -116,6 +116,10 @@ const config = {
                 label: 'Chirpstack-HPR Setup',
                 to: '/docs/chirpstack-hpr-setup',
               },
+              {
+                label: 'ChirpStack Docs',
+                to: 'https://www.chirpstack.io/'
+              },
             ],
           },
           {
@@ -149,6 +153,14 @@ const config = {
               {
                 label: 'Chirpstack-HPR GitHub',
                 href: 'https://github.com/ccall48/chirpstack-hpr',
+              },
+              {
+                label: 'Helium Foundation',
+                href: 'https://www.helium.foundation/'
+              },
+              {
+                label: 'Helium IOT Mapping',
+                href: 'https://mappers.hexato.io/'
               },
             ],
           },
