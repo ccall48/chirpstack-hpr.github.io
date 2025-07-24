@@ -31,3 +31,7 @@ chirpstack-hpr docker compose file.
     - AWS_ACCESS_KEY_ID=<your aws access key id>
     - AWS_SECRET_ACCESS_KEY=<your aws secret access key>
 ```
+
+## External Links
+
+[Getting Started with Amazon SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-getting-started.html)
