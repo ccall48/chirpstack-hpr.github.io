@@ -425,6 +425,6 @@ default initial login credentials are:
 
 ## Next Steps
 
-Now that the LNS is operational, proceed to establish routing rules. This ensures that the Helium
-Network accurately directs device packets to the designated LNS. Learn how to implement this in the
-[Configure Routing Rules](configure-routing-rules) guide.
+Now that the LNS is operational, if you have not already done so proceed to establish the routing
+rules. This ensures that the Helium IOT Network accurately directs device packets to the designated
+LNS. Learn how to implement this in the [Configure Routing Rules](https://docs.helium.com/iot/run-an-lns/configure-routing-rules/#generate-route-in-helium-config-service) guide.
