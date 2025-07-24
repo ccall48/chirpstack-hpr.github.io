@@ -8,6 +8,7 @@ DevEUI
 Docusaurus
 EU868
 Gateway
+gRPC
 Helium
 Hotspot
 IOT
@@ -15,6 +16,7 @@ NwkAddr
 NwkAddrs
 NwkSKey
 OUI
+protobuf
 ROUTE_ID
 Skf
 US915_1

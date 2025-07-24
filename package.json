@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@docusaurus/theme-live-codeblock": "^3.8.1",
     "raw-loader": "^4.0.2"
   }
 }
