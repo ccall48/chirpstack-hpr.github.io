@@ -28,3 +28,8 @@ ensure a database is operational and ready to accept incoming connections.
     - PG_EVENTS_HOST=<hostname or ip>
     - PG_EVENTS_DB=<database name>
 ```
+
+## External Links
+
+[How to Use the Postgres Docker Official Image](https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/)
+
