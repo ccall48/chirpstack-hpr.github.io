@@ -27,10 +27,10 @@ Esse esse dolor aliqua excepteur enim elit laboris. Enim elit irure esse adipisi
 
 ## Project Thanks
 
-`groot` - For getting python working with helium-crypto.rs and helium/proto so changes could be made
+[groot](https://github.com/mawdegroot) - For getting python working with helium-crypto.rs and helium/proto so changes could be made
 programmatically over the wire. This allowed for getting the initial rpc working for signing changes [helium-iot-config-py](https://github.com/mawdegroot/helium-iot-config-py).
 
-Helium Foundation & IOT Working Group - For approving an grant for the initial development work.
+[Helium Foundation](https://www.helium.foundation/) & Helium IOT Working Group - For approving an grant for the initial development work.
 
 <!--
 external integrations to account for by device and by tenant dc usage. currently supports aws sqs, postgres and http (using rpc).
