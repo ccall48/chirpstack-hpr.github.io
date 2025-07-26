@@ -10,7 +10,10 @@ tags:
     - max copies
 ---
 
-## What is max copies
+## What is Max Copies
+
+Max copies sets the maximum amount of copies you want to buy per uplink on a per device basis.
+Without setting this, the default amount applied when setting up the route-id will be used.
 
 By default Chirpstack-HPR sets a max copies session key per device with the helium config service if
 not set by the user. The default max copies if not set per device reverts to the default setting set
@@ -30,7 +33,9 @@ Click on the device `DevEui` link for the device you wish to alter or set the ma
 Once in the device dashboard, click on the `Configuration` tab.
 ![applications](/img/03-max-copies.jpg)
 
-When in the configuration tab click on the `Variables` tab.
+When in the `Configuration` tab click on the `Variables` tab below. If `max_copies` field doesn't
+exist click on the `+ Add variable` and assign it the key name of `max_copies` followed by the amount
+of copies you would like values column.
 ![applications](/img/04-max-copies.jpg)
 
 ### From Chirpstack REST API
