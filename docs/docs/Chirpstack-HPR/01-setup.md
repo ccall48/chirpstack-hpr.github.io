@@ -11,19 +11,15 @@ tags:
 ---
 
 :::note
-
 This page documents the Docker setup and environment variable configuration required to run chirpstack-hpr in a Docker container. It provides details on the Docker environment required and optional environment variables, and configuration approaches for containerised deployment.
-
 :::
 
 :::warning
-
 Please ensure you have followed the initial setup procedures outlined in the official documentation for running a Helium IOT Network LNS.
     1. [Run a LoRaWAN Network Server](https://docs.helium.com/iot/run-an-lns).
     2. [LoRaWAN Roaming on Helium](https://docs.helium.com/iot/lorawan-roaming).
 
 Before continuing further you should already have a fully operational Chirpstack LNS operating on docker compose.
-
 :::
 
 ## Git Clone Chirpstack-HPR
@@ -44,9 +40,7 @@ cd chirpstack-hpr
 | CHIRPSTACK_APIKEY | JWT Token | Global APIKEY generated via Webui or Terminal |
 
 :::tip Generate Global APIKEY from terminal
-
 `docker exec chirpstack chirpstack --config /etc/chirpstack create-api-key --name globalKey`
-
 :::
 
 ## Example Docker Compose for Chirpstack-HPR

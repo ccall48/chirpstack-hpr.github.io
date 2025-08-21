@@ -16,19 +16,17 @@ tags:
 ---
 
 :::danger Requirment
-
 **Helium Config Service Cli**
 `helium-config-service-cli` is required for some of these steps.
 1. Download latest suitable pre-compiled binary:
    [Latest Release Here](https://github.com/helium/helium-config-service-cli/releases).
 2. Compile from source yourself locally:
    [Steps to compile from source](https://docs.helium.com/iot/run-an-lns/buy-an-oui#install-cli).
-
-::::
+:::
 
 ## Infrastructure Requirements
 
-:::warning Suggested Minimum Requirements
+:::warning Suggested Minimum System Requirements
 The infrastructure requirements noted below are sufficient for getting a ChirpStack instance up and
 running for experimentation purposes, but are not suggested for use in a mission critical, production
 setting.
@@ -38,7 +36,6 @@ setting.
 - 100GB SSD hard drive
 - CPU with x86 architecture
 - Ubuntu 22.04 or 24.04
-
 :::
 
 ## Server Configuration
@@ -205,7 +202,7 @@ your ChirpStack configuration. Again, all other sections in `chirpstack.toml` ca
   # Helium 8 block dev address prefix 29
   # If you have multiple blocks you can add them as an array
   dev_addr_prefixes=[
-    "78000000/29"
+    "78000000/29",
   ]
 
   # Enabled regions.
@@ -241,9 +238,9 @@ your ChirpStack configuration. Again, all other sections in `chirpstack.toml` ca
 
 ### Update docker-compose.yml
 
-Remove the entire service definition for `chirpstack-gateway-bridge-basicstation`. If you do
-not intended on using the REST API you can also go ahead and remove the `chirpstack-rest-api`
-definition as it will needed.
+- Remove the entire service definition for `chirpstack-gateway-bridge-basicstation`.
+- If you do not intended on using the REST API you can also go ahead and remove the
+  `chirpstack-rest-api` definition.
 
 <!--
 Second, visit the [ChirpStack Docker Hub Image Repository](https://hub.docker.com/u/chirpstack) and
@@ -258,12 +255,10 @@ recent version tags found in Docker Hub as noted below:
 -->
 
 :::success Recommended Image Definitions
-
 - `image: chirpstack/chirpstack:4`
 - `image: chirpstack/chirpstack-gateway-bridge:4`
 
 This will pull the latest stable images.
-
 :::
 
 To support every region beyond the default EU868 defined in the `enabled_regions` noted
@@ -417,10 +412,8 @@ The ChirpStack web console should now be accessible at `http://<public_ip_addres
 default initial login credentials are:
 
 :::info Default ChirpStack First Logon
-
 **Username:** admin<br />
 **Password:** admin
-
 :::
 
 ## Next Steps
