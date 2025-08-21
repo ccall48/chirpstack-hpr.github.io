@@ -3,6 +3,11 @@
   "editor.tabSize": 4,
   "editor.detectIndentation": false,
   "files.trimTrailingWhitespace": true,
+
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#BF40BF",
     "titleBar.activeForeground": "#ffffff"
@@ -26,19 +31,19 @@
     }
   },
   "spellright.ignoreRegExpsByClass": {
-    "mdx": [ 
+    "mdx": [
       "/&amp;/g",
       "/&nbsp;/g",
       "/&mdash;/g",
       "/&gt;/g",
-      "/&lt;/g" 
+      "/&lt;/g"
     ],
-    "md": [ 
+    "md": [
       "/&amp;/g",
       "/&nbsp;/g",
       "/&mdash;/g",
       "/&gt;/g",
-      "/&lt;/g" 
+      "/&lt;/g"
     ],
   }
 }
