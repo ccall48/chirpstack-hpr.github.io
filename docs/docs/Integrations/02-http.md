@@ -10,10 +10,8 @@ tags:
 ---
 
 :::note
-
 This documentation does not cover how to create or setup an HTTP endpoint. I have supplied a basic
 snippet of what a python flask endpoint might look like.
-
 :::
 
 ## HTTP Integration

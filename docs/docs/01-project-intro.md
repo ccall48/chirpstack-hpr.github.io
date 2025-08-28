@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Project Intro
+title: Chirpstack-HPR Documentation
 pagination_label: Project Intro
 sidebar_position: 1
 sidebar_label: Project Intro
@@ -51,12 +51,10 @@ If you find this useful give us a star or clone the repo and contribute.
 
 If you found this helpful share a tip.
 
-solana: GKunRFVcfMem7oS5Yd3WV1Tm48jZoCFME8fbMMdprWS4
+Solana: `GKunRFVcfMem7oS5Yd3WV1Tm48jZoCFME8fbMMdprWS4`
 
 :::note existing users upgrading.
-
 If you're upgrading from Chirpstack version 4.7 or less first disable this connector until you run the manual command required to migrate the session keys from redis to postgresql. otherwise if a sync occurs before you do this your device session keys maybe removed from the helium packet router.
-
 :::
 
 ## Project Thanks

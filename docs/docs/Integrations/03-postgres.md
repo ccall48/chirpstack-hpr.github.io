@@ -9,10 +9,8 @@ tags:
 ---
 
 :::note
-
 This documentation does not cover how to create or setup an Postgres database. You will need to
 ensure a database is operational and ready to accept incoming connections.
-
 :::
 
 ## Postgres Integration
@@ -32,4 +30,3 @@ ensure a database is operational and ready to accept incoming connections.
 ## External Links
 
 [How to Use the Postgres Docker Official Image](https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/)
-
