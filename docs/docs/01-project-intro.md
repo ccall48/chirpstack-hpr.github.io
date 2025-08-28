@@ -17,17 +17,24 @@ tags:
 
 This project aims to be a simple container to leverage the helium packet config cli using python to
 interface between Chirpstack v4 and the helium packet router. It's main focus is to replicate
-actions taken in Chirpstack v4 by a tenant to add/update/remove device EUI's to the helium packet
+actions taken in Chirpstack by a tenant to add/update/remove device EUI's to the helium packet
 router when a device is actioned on by a tenant.
 
 You will need to make sure this container connects to the same docker network or network as your
-Chirpstack container is running on so that it can interact with it when changes are made.
+Chirpstack container is running on so that it can interact with chirpstack when changes are made.
 
-Max Copies per skfs are set to 0 by default and updated on activation. If not set by the tenant this
-will automatically be set as the same as your max packets set for the route id. If you wish to set
-these per device by the skfs, you need to set `device -> configuration -> variables`. click on add
-variable, set key name to `max_copies`, set the value as an integer for the amount of packets per
-device you want to purchase if it is under or above the default route id max packets for the device.
+Max Copies per skfs are set to 0 by default and updated on a device activation if not set by the
+tenant. In the case where they're not set by the tenant on a device the max copies per device will
+match the number provided when creating the route id.
+
+If you wish to set max copies on a per device basis in a situation where you require more or less
+copies than the default set route amount you will need to set a value for the max copies in the device
+configuration variables.
+
+`device -> configuration -> variables`
+
+Click on add variable, set key name to `max_copies`, set the value as an integer for the number of packets per device you want to purchase
+if it is under or above the default route id max packets setting.
 
 latest test working Chirpstack version v4.11.0
 
