@@ -28,13 +28,14 @@ tenant. In the case where they're not set by the tenant on a device the max copi
 match the number provided when creating the route id.
 
 If you wish to set max copies on a per device basis in a situation where you require more or less
-copies than the default set route amount you will need to set a value for the max copies in the device
-configuration variables.
+copies than the default set route amount you will need to set a value for the max copies in the
+device configuration variables.
 
 `device -> configuration -> variables`
 
-Click on add variable, set key name to `max_copies`, set the value as an integer for the number of packets per device you want to purchase
-if it is under or above the default route id max packets setting.
+Click on add variable, set key name to `max_copies`, set the value as an integer for the number of
+packets per device you want to purchase if it is under or above the default route id max packets
+setting.
 
 latest test working Chirpstack version v4.11.0
 
@@ -61,16 +62,16 @@ If you found this helpful share a tip.
 Solana: `GKunRFVcfMem7oS5Yd3WV1Tm48jZoCFME8fbMMdprWS4`
 
 :::note existing users upgrading.
-If you're upgrading from Chirpstack version 4.7 or less first disable this connector until you run the manual command required to migrate the session keys from redis to postgresql. otherwise if a sync occurs before you do this your device session keys maybe removed from the helium packet router.
+If you're upgrading from Chirpstack version 4.7 or less first disable this connector until you run
+the manual command required to migrate the session keys from redis to postgresql. otherwise if a
+sync occurs before you do this your device session keys maybe removed from the helium packet router.
 :::
 
 ## Project Thanks
 
-[groot](https://github.com/mawdegroot) - For getting python working with helium-crypto.rs and helium/proto so changes could be made
+[groot](https://github.com/mawdegroot) - For getting python working with helium-crypto.rs and
+helium/proto so changes could be made
 programmatically over the wire. This allowed for getting the initial rpc working for signing changes [helium-iot-config-py](https://github.com/mawdegroot/helium-iot-config-py).
 
-[Helium Foundation](https://www.helium.foundation/) & Helium IOT Working Group - For approving an grant for the initial development work.
-
-<!--
-external integrations to account for by device and by tenant dc usage. currently supports aws sqs, postgres and http (using rpc).
--->
+[Helium Foundation](https://www.helium.foundation/) & Helium IOT Working Group - For approving an
+grant for the initial development work.
