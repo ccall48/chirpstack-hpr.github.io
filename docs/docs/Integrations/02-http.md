@@ -27,7 +27,9 @@ chirpstack-hpr docker compose file.
     - HTTP_PUBLISHER_ENDPOINT=<https://example.com/uplink>
 ```
 
-The integration message gets sent over http as a gRPC encoded message. It will need to be decoded using the protobuf file, a python decoder is available in the Publishers section of the [repository](https://github.com/ccall48/chirpstack-hpr/tree/master/app/Publishers).
+The integration message gets sent over http as a gRPC encoded message. It will need to be decoded
+using the protobuf file, a python decoder is available in the Publishers section of the
+[repository](https://github.com/ccall48/chirpstack-hpr/tree/master/app/Publishers).
 
 
 ## Example Flask Endpoint

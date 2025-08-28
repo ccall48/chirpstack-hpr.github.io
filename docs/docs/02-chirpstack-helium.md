@@ -28,8 +28,8 @@ tags:
 
 :::warning Suggested Minimum Requirements
 The infrastructure requirements noted below are sufficient for getting a ChirpStack instance up and
-running for experimentation purposes, but are not suggested for use in a mission critical, production
-setting.
+running for experimentation purposes, but are not suggested for use in a mission critical,
+production setting.
 
 - 4 vCPU
 - 8GB RAM

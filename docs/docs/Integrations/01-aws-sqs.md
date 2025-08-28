@@ -10,8 +10,9 @@ tags:
 ---
 
 :::note
-This documentation does not cover how to create or setup an AWS SQS endpoint. You will need to follow
-any steps or documentation provided by AWS to get this operational and ready for incoming connections.
+This documentation does not cover how to create or setup an AWS SQS endpoint. You will need to
+follow any steps or documentation provided by AWS to get this operational and ready for incoming
+connections.
 :::
 
 ## AWS SQS Integration
