@@ -40,9 +40,7 @@ cd chirpstack-hpr
 | CHIRPSTACK_APIKEY | JWT Token | Global APIKEY generated via Webui or Terminal |
 
 :::tip Generate Global APIKEY from terminal
-
 `docker exec chirpstack chirpstack --config /etc/chirpstack create-api-key --name globalKey`
-
 :::
 
 ## Example Docker Compose for Chirpstack-HPR
