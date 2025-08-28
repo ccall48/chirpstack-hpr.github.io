@@ -127,11 +127,15 @@ const config = {
               },
               {
                 label: 'Chirpstack-HPR Setup',
-                to: '/docs/chirpstack-hpr-setup',
+                to: '/docs/chirpstack-hpr/initial-setup',
               },
               {
                 label: 'ChirpStack Docs',
                 to: 'https://www.chirpstack.io/'
+              },
+              {
+                label: 'Chirpstack Support',
+                to: 'https://support.chirpstack.io/'
               },
             ],
           },
@@ -143,15 +147,15 @@ const config = {
                 href: 'https://www.helium.com'
               },
               {
-                label: 'Helium Docs',
+                label: 'Official Helium Docs',
                 href: 'https://docs.helium.com'
               },
               {
-                label: 'Helium Discord',
+                label: 'Official Helium Discord',
                 href: 'https://discord.gg/helium',
               },
               {
-                label: 'X',
+                label: 'Helium on X',
                 href: 'https://x.com/helium',
               },
             ],
