@@ -40,22 +40,48 @@ of copies you would like values column.
 
 ### From Chirpstack REST API
 
-```json title="Endpoint: /api/devices/{device.devEui} Update the given device 1234 copies"
-{
-  "device": {
-    "applicationId": "string",
-    "description": "string",
-    "deviceProfileId": "string",
-    "isDisabled": false,
-    "joinEui": "string",
-    "name": "string",
-    "skipFcntCheck": false,
-    "tags": {},
-    },
-    "variables": {
-      "max_copies": "1234" // <- Must be input as a string
+```python title="Endpoint: /api/devices/{device.devEui} Update the given device 1234 copies"
+import requests
+
+chirpstack_server = '<REST Endpoint>'
+api_key = '<APIKEY>'
+device_eui = '<DEVICE EUI>'
+headers = {
+    'Content-Type': 'application/json',
+    'authorization': 'Bearer ' + api_key
+}
+
+json_body = {
+    "device": {
+        "devEui": device_eui,
+        "name": "String",
+        "description": "String",
+        "applicationId": "UUID String",
+        "deviceProfileId": "UUID String",
+        "skipFcntCheck": False,
+        "isDisabled": False,
+        "variables": {
+            "max_copies": "1234"  # <- Must be input as a string
+        },
+        "tags": {},
+        "joinEui": "Hex String"
     }
 }
+
+r = requests.put(
+    url=chirpstack_server + '/api/devices/' + device_eui,
+    headers=headers,
+    json=json_body
+)
+
+if r.status_code == 200:
+    print('Success:', r.status_code)
+elif r.status_code >= 400 and r.status_code < 500:
+    print('Client Error:', r.status_code)
+elif r.status_code > 500:
+    print('Server Error:', r.status_code)
+else:
+    print('Other Error:', r.status_code)
 ```
 
 ### From Chirpstack gRPC API
@@ -66,19 +92,20 @@ import grpc
 
 server = '<IP|HOST:PORT>'
 apikey = '<APIKEY>'
+device_eui = '<DEVICE EUI>'
 auth_token = [('authorization', f'Bearer {apikey}')]
 
 with grpc.insecure_channel(server) as channel:
     try:
         client = api.DeviceServiceStub(channel)
         update_device = api.UpdateDeviceRequest()
-        update_device.device.application_id = 'string'
-        update_device.device.description = 'string'
-        update_device.device.dev_eui = 'string'
-        update_device.device.device_profile_id = 'string'
+        update_device.device.application_id = 'UUID String'
+        update_device.device.description = 'String'
+        update_device.device.dev_eui = device_eui
+        update_device.device.device_profile_id = 'UUID String'
         update_device.device.is_disabled = False
-        update_device.device.join_eui = 'string'
-        update_device.device.name = 'string'
+        update_device.device.join_eui = 'Hex String'
+        update_device.device.name = 'String'
         update_device.device.skip_fcnt_check = False
         update_device.device.variables['max_copies'] = '1234' # <- Must be input as a string
         update_device_resp = client.Update(update_device, metadata=auth_token)
