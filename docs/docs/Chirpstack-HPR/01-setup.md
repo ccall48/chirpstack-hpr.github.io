@@ -176,23 +176,23 @@ services:
       - HELIUM_CONFIG_HOST=config.iot.mainnet.helium.io
       - HELIUM_PORT=6080
       - HELIUM_KEYPAIR_BIN=/app/delegate_key.bin
-      - HELIUM_NET_ID=00003C
-      - HELIUM_OUI=<OUI>
-      - HELIUM_MAX_COPIES=15
-      - ROUTE_ID=<ROUTE_ID>
+      - HELIUM_NET_ID=00003C # Helium netid, change if not using helium.
+      - HELIUM_OUI=<OUI> # Helium oui issued to you by helium foundation
+      - HELIUM_MAX_COPIES=15 # default max copies you want to purchase per uplink
+      - ROUTE_ID=<ROUTE_ID> # Helium route-id
       # ChirpStack (Required)
-      - CHIRPSTACK_SERVER=chirpstack:8080
+      - CHIRPSTACK_SERVER=chirpstack-docker-chirpstack-1:8080 # Check docker container names and set
       - CHIRPSTACK_APIKEY="Generate & paste Global APIKEY Here"
-      - REDIS_HOST=chirpstack-redis
+      - REDIS_HOST=chirpstack-docker-redis-1 # Check docker container names and set
       # Database (Required)
-      - POSTGRES_USER=chirpstack
-      - POSTGRES_PASS=chirpstack
-      - POSTGRES_HOST=chirpstack-postgres
-      - POSTGRES_PORT=5432
-      - POSTGRES_SSL_MODE="false"
-      - POSTGRES_DB=chirpstack
+      - POSTGRES_USER=chirpstack # Value you set in chirpstack-docker compose file.
+      - POSTGRES_PASS=chirpstack # Value you set in chirpstack-docker compose file.
+      - POSTGRES_HOST=chirpstack-docker-postgres-1 # Check docker container names and set
+      - POSTGRES_PORT=5432 # default postgres port if not changed
+      - POSTGRES_SSL_MODE="false" # default is "false"
+      - POSTGRES_DB=chirpstack # Value you set in chirpstack-docker compose file.
       # Usage Event Publisher (Optional)
-      -  PUBLISH_USAGE_EVENTS=False
+      -  PUBLISH_USAGE_EVENTS=False # default is False
     command: bash -c 'cd /app && python app.py'
 
 networks:
