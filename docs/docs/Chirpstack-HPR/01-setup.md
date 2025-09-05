@@ -69,7 +69,7 @@ directory and `cp .env.sample .env`. This will add a skeleton `.env` file for yo
 values required using the editor of choice.
 
 :::tip Generate Global APIKEY from terminal
-`docker exec chirpstack-docker-1 chirpstack --config /etc/chirpstack create-api-key --name globalKey`
+`docker exec chirpstack-docker-chirpstack-1 chirpstack --config /etc/chirpstack create-api-key --name globalKey`
 :::
 
 ```env title="Example .env file"
