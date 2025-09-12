@@ -70,8 +70,12 @@ sync occurs before you do this your device session keys maybe removed from the h
 ## Project Thanks
 
 [groot](https://github.com/mawdegroot) - For getting python working with helium-crypto.rs and
-helium/proto so changes could be made
-programmatically over the wire. This allowed for getting the initial rpc working for signing changes [helium-iot-config-py](https://github.com/mawdegroot/helium-iot-config-py).
+helium/proto so changes could be made programmatically over the wire. This allowed for getting the
+initial rpc working for signing changes
+[helium-iot-config-py](https://github.com/mawdegroot/helium-iot-config-py).
+
+jerm - For helping me with reading, writing and signing as well ads delegate key byte related
+questions for helium crypto related stuff.
 
 [Helium Foundation](https://www.helium.foundation/) & Helium IOT Working Group - For approving an
 grant for the initial development work.

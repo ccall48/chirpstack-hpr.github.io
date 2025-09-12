@@ -2,6 +2,7 @@ AU915_1
 AppEUI
 AppSKey
 Chirpstack
+Chirpstack-HPR
 DevAddr
 DevAddrs
 DevEUI
@@ -11,6 +12,7 @@ Gateway
 gRPC
 Helium
 Hotspot
+HPR
 IOT
 NwkAddr
 NwkAddrs
